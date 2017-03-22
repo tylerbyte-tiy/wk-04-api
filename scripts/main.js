@@ -1,22 +1,23 @@
 window.onload = function movieData () {
-  const getTitle = 'title/'
+  const getTitle = 'Titles/'
   const url = `http://www.omdbapi.com/?s=Batman&page=1` + getTitle
 
   $.ajax({
     url: url
   }).done(function(data) {
     console.log('The returned object is: ', data);
-    if (getTitle === 'title') {
+    if (getTitle === 'Titles') {
       const results = data.results;
       const resultsLength = results.length;
-      const title = [];
+      const Titles = [];
+
       for (let i = 0; i < resultsLength; i++) {
-        people.push(results[i].name)
+        Titles.push(results[i].Search)
       }
-      console.log('The titles are: ', title);
+      console.log('The Titles are: ', Titles);
     }
     else {
-      console.log('The title is: ', data.name);
+      console.log('The title is: ', data.Search[0].Title);
     }
   })
 }
