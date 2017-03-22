@@ -1,6 +1,6 @@
 window.onload = function movieData () {
   const getTitle = 'title/'
-  const url = `http://www.omdbapi.com/?t=the+dark+knight&y=200` + getTitle
+  const url = `http://www.omdbapi.com/?s=Batman&page=1` + getTitle
 
   $.ajax({
     url: url
