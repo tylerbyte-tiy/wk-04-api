@@ -1,6 +1,6 @@
 window.onload = function movieData () {
-  const getTitle = 'Titles/'
-  const url = 'http://www.omdbapi.com/?s=' + getTitle + '&page=1' 
+  const getTitle = 'Batman'
+  const url = 'http://www.omdbapi.com/?s=' + getTitle + '&page=1'
 
   $.ajax({
     url: url
@@ -16,10 +16,20 @@ window.onload = function movieData () {
       for (let i = 0; i < resultsLength; i++) {
         Titles.push(results[i].Title)
       }
-      console.log('The Titles are: ', Titles);
+    ('The Titles are: ', Titles);
     }
     else {
-      console.log('The title is: ', data.Search[0].Title);
+      console.log('The title is: ', data.Search[0].Title,'/', 'Release Date: ', data.Search[0].Year);
+      console.log('The title is: ', data.Search[1].Title,'/', 'Release Date: ', data.Search[1].Year);
+      console.log('The title is: ', data.Search[2].Title,'/', 'Release Date: ', data.Search[2].Year);
+      console.log('The title is: ', data.Search[3].Title,'/', 'Release Date: ', data.Search[3].Year);
+      console.log('The title is: ', data.Search[4].Title,'/', 'Release Date: ', data.Search[4].Year);
+      console.log('The title is: ', data.Search[5].Title,'/', 'Release Date: ', data.Search[5].Year);
+      console.log('The title is: ', data.Search[6].Title,'/', 'Release Date: ', data.Search[6].Year);
+      console.log('The title is: ', data.Search[7].Title,'/', 'Release Date: ', data.Search[7].Year);
+      console.log('The title is: ', data.Search[8].Title,'/', 'Release Date: ', data.Search[8].Year);
+      console.log('The title is: ', data.Search[9].Title,'/', 'Release Date: ', data.Search[9].Year);
+      
     }
   })
 }
