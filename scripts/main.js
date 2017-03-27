@@ -1,6 +1,6 @@
 window.onload = function movieData () {
   const getTitle = 'Batman'
-  const url = 'http://www.omdbapi.com/?s=' + getTitle + '&page=1'
+  const url = 'https://www.omdbapi.com/?s=' + getTitle + '&page=1'
 
   $.ajax({
     url: url
@@ -29,7 +29,7 @@ window.onload = function movieData () {
       console.log('The title is: ', data.Search[7].Title,'/', 'Release Date: ', data.Search[7].Year);
       console.log('The title is: ', data.Search[8].Title,'/', 'Release Date: ', data.Search[8].Year);
       console.log('The title is: ', data.Search[9].Title,'/', 'Release Date: ', data.Search[9].Year);
-      
+
     }
   })
 }
