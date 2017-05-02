@@ -5,17 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
-
-
-
     <title>Batman API</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-
-<link rel="stylesheet" href="//code.jquery.com/ui/1.8.10/themes/smoothness/jquery-ui.css" type="text/css">
-<script type="text/javascript" src="//ajax.aspnetcdn.com/ajax/jquery.ui/1.8.10/jquery-ui.min.js"></script>
-
-<!-- <link rel="stylesheet" href="styles.css"> -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="./scripts/jquery-3.2.1.min.js"></script>
 
 </head>
   <body>
@@ -23,39 +15,28 @@
   <p id="one"></p>
 </div>
 
-    <!-- CONTAINERS -->
 
 <div class="container">
 
 <div class="page-header">
-<h1>Batman Movie Finder</h1>
+<h1>Batman Movies</h1>
 </div>
 
 <div class="jumbotron">
-<p>Enter any Batman movie title into the search bar and click 'Find It!'</p>
-
-  <!-- <button id="btn">Da na na na na na na na</button> -->
+<p>Batman Movie Info</p>
 
 <p>
-<button type="submit" class = "btn-success btn-sm">Find it!</button>
+<button id="infoButton" type="submit" class="btn-success btn-sm">Display Batman Release year</button>
 </p>
-<!-- INPUT GROUPS -->
 <div class="container">
+</div>
+</div>
+</div>
+<div  class="titles">
+  <p id="titleOutput"><p></p>Released: <p id="yearOutput"> </p></p>
+</div>
 
 
-<div class="input-group input-group-lg">
-  <span class="input-group-addon">Looking for...</span>
-  <input type="text" class="form-control" placeholder="which movie?">
-</div>
-</div>
-</div>
-</div>
-    <!--  -->
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-    <script src="./scripts/jquery-3.2.1.min.js"></script>
     <script src="./scripts/main.js"></script>
   </body>
 </html>
