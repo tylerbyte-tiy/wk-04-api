@@ -1,4 +1,45 @@
-.face {
-  height: 30px;
-  width: 50px;
+header{
+  font-size: 2rem;
+  font-family: fantasy;
+  display: grid;
+  grid-template-columns: 1fr 7fr 1fr;
+  color: yellow;
+  text-align: center;
+}
+h1 {
+  text-align: center;
+  font-family: fantasy;
+}
+#yearButton, #titleButton {
+  background-color: yellow;
+}
+.left{
+  float: left;
+  clear: both;
+}
+.right{
+  float: right;
+  clear: both;
+}
+.batman-face {
+  height: 80px;
+  width: 80px;
+}
+body{
+  background-color: gray;
+}
+.zap {
+  height: 80px;
+  width: 80px;
+}
+.kapow {
+  height: 80px;
+  width: 80px;
+}
+.page-header{
+  float: inherit;
+}
+main{
+  display: grid;
+  grid-template-columns: 1fr .5fr .33fr .33fr .5fr 1fr;
 }
