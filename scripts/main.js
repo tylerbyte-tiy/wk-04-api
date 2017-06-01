@@ -1,40 +1,43 @@
 window.onload = function movieData () {
   const getTitle = 'Batman'
-  const url = 'https://www.omdbapi.com/?s=' + getTitle + '&page=1'
+  const url = 'https://www.omdbapi.com/?s=' + getTitle + '&page=1';
 
-
-////////////////////////////////////////////////////////////
-$.ajax({
+  $.ajax({
     url: url
-  }).done(function(data) {
+    }).done(function(data) {
     console.log('The returned object is:', data);
 
     if(getTitle === 'Batman') {
       const search = data.Search;
       const searchLength = search.length;
       const batmanTitles =[];
+      for (let i = 0; i < searchLength; i++) {
+          batmanTitles.push(search[i].Title)
+          }
+          let year1 = search[0].Year;
+          console.log(year1);
+          let film1 = search[0].Title;
+          console.log(film1);
 
+          let displayTitle = document.getElementById('titleButton');
 
-      // isTitle = search.filter(function(element, index) {
-      //    return element.Title})
-      //    year = search.filter(function(element, index) {
-      //       return element.year})
+          displayTitle.addEventListener("click", function() {
+          document.getElementById('titleOutput').innerHTML = film1;
+          })
 
-            for (let i = 0; i < searchLength; i++) {
-                     batmanTitles.push(search[i].Title)
-                   }
-                   let year1 = search[0].Year;
-                   console.log(year1);
-                   let film1 = search[0].Title;
-                   console.log(film1);
-                   document.getElementById('titleOutput').innerHTML = film1;
-                   let container = document.getElementById('infoButton');
-                   container.addEventListener("click", function() {
-                    document.getElementById('yearOutput').innerHTML= year1;
-                  } )
-                 }
-               })
-             }
+          let displayYear = document.getElementById('yearButton');
+
+          displayYear.addEventListener("click", function() {
+          document.getElementById('yearOutput').innerHTML= year1;
+          })
+      }
+    })
+  }
+
+             // isTitle = search.filter(function(element, index) {
+             //    return element.Title})
+             //    year = search.filter(function(element, index) {
+             //       return element.year})
 
 
                 //  ('The Titles are: ', Titles);
